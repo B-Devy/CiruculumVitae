@@ -5,55 +5,140 @@ noir     #080808
 gris    #151515
 
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Poppins:wght@300&family=Roboto:wght@300;400;500;700;900&family=Zen+Antique&display=swap');
+
 body {
+    width: 21cm;
+    margin: auto;
     background-color: gray;
-    
-    
+    font-family: 'Roboto';
 }
 
-#sheet {
+#sheet {  
     background-color: #080808;
     width: 21cm;
     height: 29.7cm;
     margin: auto;
     box-sizing: border-box;
+    z-index: 0;
+
+}
+
+#box {
+    position: absolute;
+    height: 29.7cm;
+    width: 21cm;
+    z-index: 0;
     overflow: hidden; /* empeche le dépassement des flottants*/
 
 }
 
 .degrade {
+    position: relative;
     width: 200%;
     height: 100px;
     transform: rotate(45deg);
     margin-left: -300px;
     background: linear-gradient(70deg,#080808, #161616);
+    z-index: 0;
 }
 
-#sheet :nth-child(1) {
+#box :nth-child(1) {
     margin-top: -90px;
     height: 160px;
 }
-#sheet :nth-child(2) {
+#box :nth-child(2) {
     margin-top: 150px;
     height: 70px;
 }
-#sheet :nth-child(3) {
+#box :nth-child(3) {
     margin-top: 120px;
     height: 70px;
 }
-#sheet :nth-child(4) {
+#box :nth-child(4) {
     margin-top: 60px;
     height: 110px;
 }
-#sheet :nth-child(5) {
+#box :nth-child(5) {
     margin-top: 180px;
     height: 150px;
 }
-#sheet :nth-child(6) {
+#box :nth-child(6) {
     margin-top: 120px;
     height: 70px;
 }
-#sheet :nth-child(7) {
+#box :nth-child(7) {
     margin-top: 80px;
     height: 170px;
 }
+
+
+
+#main {
+    width:100%;
+    height:100%;
+    /*border: green dotted 2px;*/
+}
+
+
+
+#prenom {
+    position: relative;
+    top: 17%;
+    left: 7cm;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    background-color: yellow;
+ 
+    width: 5cm;
+    height: 80%;
+
+    z-index: 2;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    background: linear-gradient(90deg,#fef346, #fab507);
+    
+}
+
+h1 {
+
+    transform: rotate(-90deg);
+    /*transform-origin: 100px 100px;*/
+    font-size:  90px;
+    font-weight: bold;
+
+    width: 800px;
+    height: auto;
+    margin-left: -80px;
+    margin-bottom: -40px;
+    
+    
+    color: #080808;
+
+    
+}
+
+
+h2 {
+
+    transform: rotate(-90deg);
+    /*transform-origin: 100px 100px;*/
+    font-size:  43px;
+    font-weight: bold;
+    width: 800px;
+    height: auto;
+    margin-right: -100px;
+    margin-bottom: -150px;
+    text-shadow: 0px 0px 8px #080808;
+    /*text-shadow: 0px 0px 5px #080808;*/
+    -webkit-text-stroke: 1px #080808;
+    color: white;
+}
+
+
+/*clip-path: polygon(0 0, 100% 0, 90% 30%, 0 30%);*/
