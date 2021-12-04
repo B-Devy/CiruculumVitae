@@ -31,6 +31,7 @@ body {
     width: 21cm;
     z-index: 0;
     overflow: hidden; /* empeche le dépassement des flottants*/
+    border: dotted blue 2px;
 
 }
 
@@ -76,9 +77,10 @@ body {
 
 
 #main {
+    position: relative;
     width:100%;
     height:100%;
-    /*border: green dotted 2px;*/
+    border: green dotted 2px;
 }
 
 
@@ -117,10 +119,8 @@ h1 {
     margin-left: -80px;
     margin-bottom: -40px;
     
-    
     color: #080808;
 
-    
 }
 
 
@@ -140,5 +140,125 @@ h2 {
     color: white;
 }
 
+#portrait {
+    position: absolute;    /*marche car le parent et en mode position relative*/
+    top: 0.5cm;
+    left: 0.5cm;
+    z-index: 5;
+    margin-top: 0px;
+}
 
-/*clip-path: polygon(0 0, 100% 0, 90% 30%, 0 30%);*/
+h3 {
+    background: linear-gradient(180deg,#fef346, #fab507);
+    color: #080808;
+    border: green dotted 3px;
+    z-index: 3;
+    text-align: center;
+
+    padding-top: 0.1cm;
+    padding-bottom: 0.1cm;
+
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 1.8em;
+
+  
+}
+
+/*     CATEGORIES       */
+
+#hobbies {
+    position: absolute;
+    top: 7cm;
+    left: 0cm;
+
+    width: 6.6cm;
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+
+}
+
+#personnalite {
+    position: absolute;
+    top: 12cm;
+    left: 0cm;
+
+    width: 6.6cm;
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+}
+
+#competences {
+    position: absolute;
+    top: 18.5cm;
+    width: 6.6cm;
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+}
+
+p { 
+    color: #fab507;
+
+}
+
+
+
+.textegauche {
+    
+    width: 6.6cm;
+    border: red 2px dotted;
+    margin: auto;
+    text-align: center;
+    left: 0.2cm;
+}
+
+#hobbiestexte {
+    position: absolute;
+    top: 9cm;
+
+}
+
+#persoschema {
+    position: absolute;
+    top: 14cm;
+}
+
+#competencestexte {
+    position: absolute;
+    top: 20.8cm;
+
+}
+
+.casenoire {
+    box-shadow: inset 0 0 10px rgba(214, 207, 163, 0.5);
+    width: 6.4cm;
+    height: 0.8cm;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.jauge {
+    
+    width: 95%;
+    height: 85%;
+    opacity: none;
+
+    background: linear-gradient(180deg,#fef346, #fab507);    
+    text-align: start;
+    z-index: 2;
+
+}
+
+.jauge p{
+    display: block;
+    height: 100%;
+    margin: 2px;
+
+
+
+    color: #080808;
+    font-weight: bold;
+    border: white 2px dotted;
+    z-index: 3;
+}
+
+/*clip-path: polygon(0 0, 100% 0, 90% 30%, 0 30%);   */
