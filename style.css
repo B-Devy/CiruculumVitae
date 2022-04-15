@@ -1,38 +1,44 @@
-/* fichier css
-jaune  #fef346
-orange  #fab507
-noir     #080808
-gris    #151515
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Poppins:wght@300&family=Roboto:wght@300;400;500;700;900&family=Zen+Antique&display=swap');
 
+:root {
+    --jaune1: #fef346;
+    --orange1: #fab507;
+    --ombre: #080808;
+    --gris: #151515;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
-    width: 21cm;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
     background-color: gray;
-    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #sheet {  
-    background-color: #080808;
+    background-color: var(--ombre);
     width: 21cm;
     height: 29.7cm;
-    margin: auto;
     box-sizing: border-box;
+    overflow: hidden;
     z-index: 0;
-
 }
 
+/*----------------------------ARRIERE PLAN------------------------------------*/
 #box {
     position: absolute;
     height: 29.7cm;
     width: 21cm;
     z-index: 0;
     overflow: hidden; /* empeche le dépassement des flottants*/
-    border: dotted blue 2px;
-
+    /*border: dotted pink 2px;*/
 }
 
 .degrade {
@@ -41,7 +47,7 @@ body {
     height: 100px;
     transform: rotate(45deg);
     margin-left: -300px;
-    background: linear-gradient(70deg,#080808, #161616);
+    background: linear-gradient(70deg, var(--ombre), #161616);
     z-index: 0;
 }
 
@@ -75,102 +81,87 @@ body {
 }
 
 
-
+/*----------------------------------------------------------------------------*/
 #main {
     position: relative;
     width:100%;
     height:100%;
-    border: green dotted 2px;
+    /*border: pink dotted 2px;*/
 }
 
-
-
+/*---------------------BARRE DE PRESENTATION----------------------------*/
 #prenom {
-    position: relative;
-    top: 17%;
+    position: absolute;
+    top: 29cm;
     left: 7cm;
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-    background-color: yellow;
- 
-    width: 5cm;
-    height: 80%;
-
-    z-index: 2;
-
+    
+    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+    width: 24cm;
+    height: 5cm;
 
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-
-    background: linear-gradient(90deg,#fef346, #fab507);
+    flex-direction: column;
+    padding-left: 30px;
     
+    background: linear-gradient(180deg,var(--jaune1), var(--orange1));
+    transform-origin: left top;
+    transform: rotate(-90deg);
+    z-index: 2;
 }
 
 h1 {
-
-    transform: rotate(-90deg);
-    /*transform-origin: 100px 100px;*/
     font-size:  90px;
     font-weight: bold;
-
-    width: 800px;
-    height: auto;
-    margin-left: -80px;
-    margin-bottom: -40px;
-    
-    color: #080808;
-
+    width: 720px;
+    color: var(--ombre);
 }
 
-
 h2 {
-
-    transform: rotate(-90deg);
-    /*transform-origin: 100px 100px;*/
     font-size:  43px;
     font-weight: bold;
-    width: 800px;
-    height: auto;
-    margin-right: -100px;
-    margin-bottom: -150px;
-    text-shadow: 0px 0px 8px #080808;
-    /*text-shadow: 0px 0px 5px #080808;*/
-    -webkit-text-stroke: 1px #080808;
+    width: 700px;
+    text-shadow: 0px 0px 8px var(--ombre);
+    -webkit-text-stroke: 1px var(--ombre);
     color: white;
 }
 
+/*--------------------ESPACE GAUCHE----------------------------*/
+
+section {
+    border: violet 1px dotted;
+    width: 7cm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
 #portrait {
-    position: absolute;    /*marche car le parent et en mode position relative*/
-    top: 0.5cm;
-    left: 0.5cm;
+    
     z-index: 5;
     margin-top: 0px;
 }
 
 h3 {
-    background: linear-gradient(180deg,#fef346, #fab507);
-    color: #080808;
-    border: green dotted 3px;
+    background: linear-gradient(180deg,var(--jaune1), var(--orange1));
+    color: var(--ombre);
     z-index: 3;
     text-align: center;
 
-    padding-top: 0.1cm;
-    padding-bottom: 0.1cm;
+    padding: 0.1cm 0 0.1cm 0;
 
-    font-family: 'Roboto';
     font-weight: 900;
     font-size: 1.8em;
-
-  
 }
 
 /*     CATEGORIES       */
 
 #hobbies {
-    position: absolute;
+ /*   position: absolute;
     top: 7cm;
-    left: 0cm;
+    left: 0cm;*/
 
     width: 6.6cm;
     clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
@@ -178,17 +169,17 @@ h3 {
 }
 
 #personnalite {
-    position: absolute;
+  /*  position: absolute;
     top: 12cm;
-    left: 0cm;
+    left: 0cm;*/
 
     width: 6.6cm;
     clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 }
 
 #competences {
-    position: absolute;
-    top: 18.5cm;
+   /* position: absolute;
+    top: 18.5cm;*/
     width: 6.6cm;
     clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
 }
@@ -204,11 +195,11 @@ p {
     
     width: 6.6cm;
     border: red 2px dotted;
-    margin: auto;
+    /*margin: auto;*/
     text-align: center;
     left: 0.2cm;
 }
-
+/*
 #hobbiestexte {
     position: absolute;
     top: 9cm;
@@ -224,7 +215,7 @@ p {
     position: absolute;
     top: 20.8cm;
 
-}
+}*/
 
 .casenoire {
     box-shadow: inset 0 0 10px rgba(214, 207, 163, 0.5);
