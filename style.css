@@ -4,7 +4,7 @@
     --jaune1: #fef346;
     --orange1: #fab507;
     --ombre: #080808;
-    --gris: #151515;
+    --gris: #222222;
 }
 
 * {
@@ -38,7 +38,6 @@ body {
     width: 21cm;
     z-index: 0;
     overflow: hidden; /* empeche le dépassement des flottants*/
-    /*border: dotted pink 2px;*/
 }
 
 .degrade {
@@ -47,7 +46,7 @@ body {
     height: 100px;
     transform: rotate(45deg);
     margin-left: -300px;
-    background: linear-gradient(70deg, var(--ombre), #161616);
+    background: linear-gradient(70deg, var(--ombre), var(--gris));
     z-index: 0;
 }
 
@@ -80,13 +79,13 @@ body {
     height: 170px;
 }
 
-
 /*----------------------------------------------------------------------------*/
 #main {
     position: relative;
     width:100%;
     height:100%;
-    /*border: pink dotted 2px;*/
+    display: flex;
+    justify-content: space-between;
 }
 
 /*---------------------BARRE DE PRESENTATION----------------------------*/
@@ -96,15 +95,15 @@ body {
     left: 7cm;
     
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
-    width: 24cm;
+    background: linear-gradient(180deg,var(--jaune1), var(--orange1));
+    width: 22cm;
     height: 5cm;
+    padding-left: 30px;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 30px;
     
-    background: linear-gradient(180deg,var(--jaune1), var(--orange1));
     transform-origin: left top;
     transform: rotate(-90deg);
     z-index: 2;
@@ -124,6 +123,7 @@ h2 {
     text-shadow: 0px 0px 8px var(--ombre);
     -webkit-text-stroke: 1px var(--ombre);
     color: white;
+    text-align: center;
 }
 
 /*--------------------ESPACE GAUCHE----------------------------*/
@@ -131,7 +131,7 @@ h2 {
 section {
     border: violet 1px dotted;
     width: 7cm;
-    height: 100%;
+    height: 29.7cm;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,84 +139,33 @@ section {
 }
 
 #portrait {
-    
     z-index: 5;
     margin-top: 0px;
 }
 
 h3 {
+    width: 6cm;
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
     background: linear-gradient(180deg,var(--jaune1), var(--orange1));
+    padding: 0.1cm 0.3cm 0.1cm 0.3cm;
+    
     color: var(--ombre);
-    z-index: 3;
-    text-align: center;
-
-    padding: 0.1cm 0 0.1cm 0;
-
     font-weight: 900;
     font-size: 1.8em;
-}
-
-/*     CATEGORIES       */
-
-#hobbies {
- /*   position: absolute;
-    top: 7cm;
-    left: 0cm;*/
-
-    width: 6.6cm;
-    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
-
-}
-
-#personnalite {
-  /*  position: absolute;
-    top: 12cm;
-    left: 0cm;*/
-
-    width: 6.6cm;
-    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
-}
-
-#competences {
-   /* position: absolute;
-    top: 18.5cm;*/
-    width: 6.6cm;
-    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+    z-index: 3;
 }
 
 p { 
-    color: #fab507;
-
+    color: var(--orange1);
 }
 
-
-
-.textegauche {
-    
+.divgauche {
     width: 6.6cm;
     border: red 2px dotted;
-    /*margin: auto;*/
     text-align: center;
-    left: 0.2cm;
-}
-/*
-#hobbiestexte {
-    position: absolute;
-    top: 9cm;
-
 }
 
-#persoschema {
-    position: absolute;
-    top: 14cm;
-}
-
-#competencestexte {
-    position: absolute;
-    top: 20.8cm;
-
-}*/
-
+/*--------------------JAUGES----------------------------*/
 .casenoire {
     box-shadow: inset 0 0 10px rgba(214, 207, 163, 0.5);
     width: 6.4cm;
@@ -232,24 +181,161 @@ p {
     width: 95%;
     height: 85%;
     opacity: none;
-
     background: linear-gradient(180deg,#fef346, #fab507);    
     text-align: start;
     z-index: 2;
-
 }
 
 .jauge p{
     display: block;
     height: 100%;
     margin: 2px;
-
-
-
     color: #080808;
     font-weight: bold;
     border: white 2px dotted;
     z-index: 3;
 }
 
-/*clip-path: polygon(0 0, 100% 0, 90% 30%, 0 30%);   */
+/*--------------------LANGUE----------------------------*/
+#langue {
+    height: 150px;
+}
+
+/*--------------------ESPACE DROIT  ----------------------------*/
+#sectiongauche {
+    width: 340px;
+}
+
+#sectiongauche h3 {
+    
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 8% 100%);
+    text-align: end;
+    align-self: end;
+    margin-right: 5px;  
+}
+
+/*--------------------PROFILE----------------------------*/
+#profilage {
+    width: 17cm;
+    
+    text-align: start;
+}
+
+#profilage p {
+    /*border: yellow 2px solid;*/
+    margin-bottom: 5px;
+}
+
+
+/*--------------------LINKS----------------------------*/
+#linkbox {
+    width: 8cm;
+    font-size: 0.8em;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    /*border: violet 2px dotted;*/
+    margin-bottom: 5px;
+
+}
+
+#linkbox img {
+    display: block;
+    width: 35px;
+}
+
+#linkbox p {
+    margin-left: 5px;
+}
+
+/*--------------------QUALIF----------------------------*/
+.qual {
+    width: 8cm;
+
+}
+
+.lignequal {
+    border: dotted 2px blueviolet;
+    text-align: start;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.lignequal p {
+    margin-left: 15px;
+}
+
+.rond {
+    width: 15px;
+    height: 15px;
+    background-color: var(--orange1);
+    border-radius: 50%;
+}
+
+.dots {
+    width: 100%;
+    height: 40px;
+    padding-top: 4px;
+    /*background-color: green;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.pointilles {
+    width: 3px;
+    height: 10px;
+    background-color: var(--orange1);
+}
+
+/*--------------------XP----------------------------*/
+#xp {
+    width: 8cm;
+    display: flex;
+}
+
+#xp p {
+    margin-left: 15px;
+    text-align: start;
+}
+
+#map {
+    width: 8cm;
+    height: 180px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#map img {
+    display: block;
+    height: 140px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
