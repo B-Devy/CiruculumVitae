@@ -129,7 +129,7 @@ h2 {
 /*--------------------ESPACE GAUCHE----------------------------*/
 
 section {
-    border: violet 1px dotted;
+    /*border: violet 1px dotted;*/
     width: 7cm;
     height: 29.7cm;
     display: flex;
@@ -139,8 +139,18 @@ section {
 }
 
 #portrait {
-    z-index: 5;
+    z-index: 1;
     margin-top: 0px;
+    background-image: url(images/PHOTOCV2.bmp);
+}
+
+#portrait img {
+    display: block;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 3s;
 }
 
 h3 {
@@ -159,10 +169,36 @@ p {
     color: var(--orange1);
 }
 
+span {
+    font-size: 1.2em;
+    color: var(--jaune1);
+}
+
 .divgauche {
     width: 6.6cm;
-    border: red 2px dotted;
+    /*border: red 2px dotted;*/
     text-align: center;
+}
+
+#divschema {
+    overflow: hidden;
+}
+
+#schema {
+    display: block;
+    position:relative;
+    
+    animation: anim 5s;
+}
+@keyframes anim {
+    0% {
+        top:100%;
+        opacity: 0;
+    }
+    100% {
+        top:0%;
+        opacity:1;
+    }
 }
 
 /*--------------------JAUGES----------------------------*/
@@ -178,7 +214,7 @@ p {
 
 .jauge {
     
-    width: 95%;
+    width: 0%;
     height: 85%;
     opacity: none;
     background: linear-gradient(180deg,#fef346, #fab507);    
@@ -192,13 +228,69 @@ p {
     margin: 2px;
     color: #080808;
     font-weight: bold;
-    border: white 2px dotted;
+   /* border: white 2px dotted;*/
     z-index: 3;
 }
 
 /*--------------------LANGUE----------------------------*/
 #langue {
     height: 150px;
+}
+
+#langue img {
+    width: 50px;
+}
+#circlebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cerclenoir {
+    width: 100px;
+    height: 100px;
+    box-shadow: inset 0 0 10px rgba(214, 207, 163, 0.5);
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.cercle {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: var(--ombre);
+    /*background-image:
+    linear-gradient(50deg, transparent 50%, var(--orange1) 50%),
+    linear-gradient(180deg, var(--orange1) 50%, transparent 50%);*/
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cerclecentre {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: var(--ombre);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circlelegende {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#langue p {
+    font-size: 1.5em;
 }
 
 /*--------------------ESPACE DROIT  ----------------------------*/
@@ -257,14 +349,16 @@ p {
 }
 
 .lignequal {
-    border: dotted 2px blueviolet;
+    /*border: dotted 2px blueviolet;*/
     text-align: start;
     display: flex;
     margin-bottom: 10px;
 }
 
-.lignequal p {
+.lignequal p,
+#xp p {
     margin-left: 15px;
+    line-height: 25px;
 }
 
 .rond {

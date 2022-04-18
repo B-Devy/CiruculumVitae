@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Ciruculum vitae Bertrand Devy</title>
 </head>
 
@@ -27,18 +28,19 @@
         <div id="main">
             <section>
                 <div id="portrait">
-                    <img src="images/PHOTOCV2.bmp" alt="">
+                    <img src="images/PHOTOCV2NB.bmp" alt="">
+                    
                 </div>
 
                 <h3 id="hobbies">HOBBIES</h3>
-                <div class="divgauche">
-                    <p>FITNESS DESIGN GUITARE CUISINE JAPONAISE <br> ROMANS FANTASTIQUES <br>  JEUX DE ROLES <br> JEUX VIDEOS</p>
+                <div class="divgauche"><span></span>
+                    <p>FITNESS <span>DESIGN</span> GUITARE CUISINE JAPONAISE <br> <span>ROMANS FANTASTIQUES</span><br>  JEUX DE ROLES <br> JEUX VIDEOS</p>
                 </div>
 
 
                 <h3 id="personnalite">PERSONNALITÉ</h3>
-                <div class="divgauche">
-                    <img src="images/schema personnalité.svg" alt="">
+                <div class="divgauche" id="divschema">
+                    <img id="schema" src="images/schema personnalité.svg" alt="">
                 </div>
 
 
@@ -54,7 +56,21 @@
                 </div>
 
                 <div class="divgauche" id="langue">
-                    <p>langues</p>
+                    <div id="circlebox">
+                        <div class="cerclenoir">
+                            <div class="cercle" id="cercleG">
+                                <div class="cerclecentre"><p>35%</p></div>
+                            </div>
+                        </div>
+                        <div class="cerclenoir">
+                            <div class="cercle" id="cercleD">
+                                <div class="cerclecentre"><p>75%</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="circlelegende">
+                        <p>ORAL</p><img src="images/drapeau-ENG.png" alt=""><p>ECRIT</p>
+                    </div>
                 </div>
 
             </section>
