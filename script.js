@@ -76,20 +76,54 @@ setTimeout(function() {
 }, 1000)
 
 
-  
+/*--------BARRE DE PRESENTATION--------------*/ 
 
+function presenteur() {
+    var pren = document.getElementById('prenom');
+    pren.style.top = "29cm";
+};
 
+presenteur();
 
+/*--------BARRES LATERALES--------------*/ 
 
+function lateraleur(identifiant) {
+    var hob = document.getElementById(identifiant)
+    hob.style.left = "0cm";   /*Attention garder la meme unité, sinon ça ne fonctionne pas*/
+}
 
+lateraleur('hobbies');
+setTimeout(function() {
+    return lateraleur("personnalite")
+}, 400);
+setTimeout(function() {
+    return lateraleur("competences")
+}, 800);
+lateraleur('profile');
+setTimeout(function() {
+    return lateraleur("qualifications")
+}, 400);
+setTimeout(function() {
+    return lateraleur("experiences")
+}, 800);
 
+/*----------ICON OPACITEUR--------------------------*/ 
 
+var icons = document.querySelectorAll('#linkbox img');
 
-
-
-
-
-
+(function iconer() {
+    var idd = setInterval(timeur, 500)
+    var i = 0;
+    function timeur() {
+        if (i == 5) {
+            clearInterval(idd);
+        } else {
+        var ico = icons[i].style.opacity = 1;
+        i++;
+        return ico;
+        };
+    }
+})();
 
 
 

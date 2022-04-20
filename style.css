@@ -91,8 +91,9 @@ body {
 /*---------------------BARRE DE PRESENTATION----------------------------*/
 #prenom {
     position: absolute;
-    top: 29cm;
+    top: 55cm;
     left: 7cm;
+    transition: all 5s;
     
     clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
     background: linear-gradient(180deg,var(--jaune1), var(--orange1));
@@ -153,7 +154,44 @@ section {
     transition: all 3s;
 }
 
+#hobbies {
+    position: relative;
+    left: -8cm;
+    transition: 3s;
+}
+
+#personnalite {
+    position: relative;
+    left: -8cm;
+    transition: 3s;
+}
+
+#competences {
+    position: relative;
+    left: -8cm;
+    transition: 3s;
+}
+
+#profile {
+    position: relative;
+    left: 8cm;
+    transition: 3s;
+}
+
+#qualifications {
+    position: relative;
+    left: 8cm;
+    transition: 3s;
+}
+
+#experiences {
+    position: relative;
+    left: 8cm;
+    transition: 3s;
+}
+
 h3 {
+    position: relative;
     width: 6cm;
     clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
     background: linear-gradient(180deg,var(--jaune1), var(--orange1));
@@ -163,6 +201,7 @@ h3 {
     font-weight: 900;
     font-size: 1.8em;
     z-index: 3;
+   
 }
 
 p { 
@@ -336,6 +375,8 @@ span {
 #linkbox img {
     display: block;
     width: 35px;
+    opacity: 0;
+    transition: 3s;
 }
 
 #linkbox p {
@@ -369,7 +410,8 @@ span {
 }
 
 .dots {
-    width: 100%;
+    
+    width: 15px;
     height: 40px;
     padding-top: 4px;
     /*background-color: green;*/
@@ -378,15 +420,25 @@ span {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 }
 
+
 .pointilles {
+    animation: upup 3s infinite;
     width: 3px;
     height: 10px;
     background-color: var(--orange1);
 }
-
+@keyframes upup {
+    0% {
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+    100% {
+        margin-top: 0px;
+       margin-bottom:0px;
+    }
+}
 /*--------------------XP----------------------------*/
 #xp {
     width: 8cm;
